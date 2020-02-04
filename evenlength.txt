@@ -1,0 +1,8 @@
+len([],0).
+
+len([H|T],R) :- len(T,R1),
+		R is R1+1.
+
+evenlength(L) :- len(L,R),
+		 Z is R mod 2,
+		 Z=0.

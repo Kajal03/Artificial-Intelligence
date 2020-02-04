@@ -1,0 +1,4 @@
+maxlist([S],S).
+
+maxlist([H1,H2|T],R) :- H1>=H2 -> R1 is H1, maxlist([R1|T],R)  ; R1 is H2, maxlist([R1|T],R).
+			

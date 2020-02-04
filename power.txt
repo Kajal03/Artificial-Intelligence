@@ -1,0 +1,9 @@
+pow(0,0,R) :- write("Indeterminate").
+
+pow(X,0,1).
+
+pow(X,Y,R) :-   Y1 is Y-1,
+		pow(X,Y1,R1),
+		R is R1 * X.
+	    
+	    

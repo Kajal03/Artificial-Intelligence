@@ -1,0 +1,16 @@
+list(X,R):- list1(X,3,R).
+list1(Y,0,[]).
+
+list1([H|T],X,[H|R]) :- X1 is X-1,
+		     list1(T,X1,R).
+			
+
+
+
+
+
+
+
+
+		
+		

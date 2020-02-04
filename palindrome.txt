@@ -1,0 +1,16 @@
+conc([],X,X).
+conc([H1|T1],X,[H1|T2]) :- conc(T1,X,T2).
+
+
+rev([],[]).
+rev([S],[S]).
+rev([H|T],R) :- rev(T,R1), conc(R1,[H],R).
+
+
+compare([],[]).
+compare([H1|T1],[H2|T2]) :- H1=H2, compare(T1,T2).
+
+
+palindrome([]).
+palindrome(L) :- rev(L,R),
+		 compare(L,R).

@@ -1,0 +1,3 @@
+conc([],X,X).
+
+conc([H1|T1],X,[H1|T2]) :- conc(T1,X,T2).

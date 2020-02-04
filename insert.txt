@@ -1,0 +1,4 @@
+insert_nth(A,1,X,[A|X]).
+insert_nth(A,P,[H|T],[H|R]) :-  P1 is P-1,
+				insert_nth(A,P1,T,R).
+    

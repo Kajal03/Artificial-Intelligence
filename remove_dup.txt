@@ -1,0 +1,7 @@
+remove_element(X,[],[]).
+remove_element(H,[H|T],R):- remove_element(H,T,R).
+remove_element(X,[H|T],[H|R]):- remove_element(X,T,R).
+
+remove_dup([],[]).
+remove_dup([H|T],[H|R]) :- remove_element(H,T,R1),
+			   remove_dup(R1,R).

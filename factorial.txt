@@ -1,0 +1,5 @@
+facto(0,1).
+facto(N,R) :- N1 is N-1,
+	      facto(N1, R1),
+	      R is N * R1.
+

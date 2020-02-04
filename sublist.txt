@@ -1,0 +1,2 @@
+sublist([],R).
+sublist([H|T],[H1|T1]) :- H=H1 -> sublist(T,T1) ; sublist([H|T],T1).
